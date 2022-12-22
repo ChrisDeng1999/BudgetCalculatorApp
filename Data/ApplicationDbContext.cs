@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BudgetCalculator.Models;
 
 namespace BudgetCalculator.Data
 {
@@ -12,5 +13,7 @@ namespace BudgetCalculator.Data
             : base(options)
         {
         }
+        public DbSet<BudgetCalculator.Models.Budget> Budget { get; set; }
+        public DbSet<BudgetCalculator.Models.BudgetItems> BudgetItems { get; set; }
     }
 }
